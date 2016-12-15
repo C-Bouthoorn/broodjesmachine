@@ -1,0 +1,4 @@
+http://getbootstrap.com/css/
+http://getbootstrap.com/components/
+http://fontawesome.io/icons/
+https://silviomoreto.github.io/bootstrap-select/examples/
