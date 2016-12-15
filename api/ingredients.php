@@ -69,15 +69,10 @@
   function ingredientsScript() {
     global $ALL_BROODJES, $ALL_BELEG;
 
-    echo '<script>';
-
-    echo 'window.ALL_BROODJES = ';
-    echo json_encode($ALL_BROODJES);
-    echo ';';
-
-    echo 'window.ALL_BELEG = ';
-    echo json_encode($ALL_BELEG);
-    echo ';';
-
-    echo '</script>';
+    ?><script>
+      //jshint ignore:start
+      window.ALL_BROODJES = <?= json_encode($ALL_BROODJES); ?>;
+      window.ALL_BELEG = <?= json_encode($ALL_BELEG); ?>;
+      //jshint ignore:end
+    </script><?php
   }

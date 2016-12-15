@@ -10,13 +10,7 @@
     <?php require 'php-helpers/price_formatting.php'; ?>
     <?php require 'api/ingredients.php'; ?>
 
-    <?= dependencies() ?>
-    <?= ingredientsScript() ?>
-
-    <script src="/broodjesmachine/assets/js/bootstrap_alert.js"></script>
-    <script src="/broodjesmachine/assets/js/easy_templating.js"></script>
-    <script src="/broodjesmachine/assets/js/format_price.js"></script>
-    <script src="/broodjesmachine/assets/js/plaatsorder.js"></script>
+    <?= dependencies_css() ?>
   </head>
   <body>
     <?php require 'php-templates/navigation.php'; ?>
@@ -67,5 +61,14 @@
         <button type="submit" class="btn btn-primary">Add order for <strong id="price">€0</strong></button>
       </form>
     </div>
+
+
+    <?= dependencies_js() ?>
+    <?= ingredientsScript() ?>
+    <script src="/broodjesmachine/assets/js/plaatsorder.js"></script>
+
+    <script async src="/broodjesmachine/assets/js/bootstrap_alert.js"></script>
+    <script async src="/broodjesmachine/assets/js/easy_templating.js"></script>
+    <script async src="/broodjesmachine/assets/js/format_price.js"></script>
   </body>
 </html>
