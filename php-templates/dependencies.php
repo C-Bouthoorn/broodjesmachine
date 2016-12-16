@@ -26,7 +26,7 @@ function dependencies_css() { ?>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
 
   <!-- Custom styles -->
-  <link rel="stylsheet" href="/broodjesmachine/assets/css/style.css">
+  <link rel="stylesheet" href="/broodjesmachine/assets/css/style.css">
 <?php }
 
 function dependencies() {

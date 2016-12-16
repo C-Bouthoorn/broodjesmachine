@@ -3,27 +3,38 @@
 /*globals createBootstrapAlert:true, formatPrice: true */
 
 
+function add(a, b) { return a + b; }
+
+
+// The reason to have so much safety in these two functions is because:
+// - window.ALL_* could be undefined, and undefined[*] gives an error
+// - window.ALL_*[*] could be undefined and undefined[price] gives an error
+function getBroodjePriceSafe(broodje) {
+  return (
+    (  window.ALL_BROODJES || {}  )[broodje] || { price: NaN }
+  ).price;
+}
+
+function getBelegPriceSafe(beleg) {
+  return (
+    (  window.ALL_BELEG || {}  )[beleg] || { price: NaN }
+  ).price;
+}
+
+
 function recalculatePrice() {
+  // Calculate the total price of the order
   var $form = $('#orderform');
 
   var broodje = getSelectedBroodje($form);
   var belegArray = getSelectedBeleg($form);
 
-  console.log();
+  var broodjePrice = getBroodjePriceSafe(broodje);
+  var belegPrice = belegArray.map(getBelegPriceSafe).reduce(add, 0) || NaN;
 
-  var broodje_price = ( (window.ALL_BROODJES || {})[broodje] || { price: NaN } ).price;
+  var totalPrice = broodjePrice + belegPrice;
 
-  var beleg_price = (function() {
-    var sum = 0;
-    belegArray.map(function(beleg) {
-      sum += ((window.ALL_BELEG || {})[beleg] || { price: NaN }).price;
-    });
-    return sum;
-  })();
-
-  var total_price = broodje_price + beleg_price;
-
-  if ( isNaN(total_price) ) {
+  if ( isNaN(totalPrice) ) {
     createBootstrapAlert($form, {
       type: 'warning',
       message: "Something went wrong with preparing your meal, please try again.",
@@ -32,7 +43,8 @@ function recalculatePrice() {
     });
   }
 
-  $form.find('#price').html('€' + formatPrice(total_price));
+  // Set price to form price field
+  $form.find('#price').html('€' + formatPrice(totalPrice));
 }
 
 function getSelectedBroodje($form) {

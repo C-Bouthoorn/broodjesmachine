@@ -1,5 +1,6 @@
-'use strict'; //jshint ignore: line
+'use strict'; //jshint ignore:line
 /*jshint browser:true, devel:true, jquery:true */
+
 
 function formatPrice(price) {
   var formattedprice = Math.round(price * 100) / 100;

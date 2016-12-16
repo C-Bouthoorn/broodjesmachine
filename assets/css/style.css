@@ -3,3 +3,7 @@
 body {
   font-family: 'Raleway', sans-serif;
 }
+
+.bootstrap-select > .dropdown-toggle.bs-placeholder {
+  color: #fff;
+}

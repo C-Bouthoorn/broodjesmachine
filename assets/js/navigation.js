@@ -1,3 +1,7 @@
+'use strict'; //jshint ignore:line
+/*jshint browser:true, devel:true, jquery:true */
+
+
 $(document).ready(function() {
   var current_path = location.pathname;
 

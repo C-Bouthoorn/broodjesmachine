@@ -1,7 +1,7 @@
-'use strict'; //jshint ignore: line
-
+'use strict'; //jshint ignore:line
 /*jshint browser:true, devel:true, jquery:true */
-/*globals applyVariablesToTemplate */
+/*globals applyVariablesToTemplate:true */
+
 
 var ALERT_TEMPLATE =
   '<div id="bsalertnr{{id}}" class="alert alert-dismissible alert-{{type}}" role="alert">' +

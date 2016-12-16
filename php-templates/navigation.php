@@ -8,7 +8,7 @@
         <span class="fa fa-bars bg-primary"></span>
       </button>
 
-      <a class="navbar-brand" href="#">Broodjesmachine</a>
+      <a class="navbar-brand" href="#">Zikwel</a>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
