@@ -10,6 +10,8 @@
     <?php require 'php-helpers/price_formatting.php'; ?>
     <?php require 'api/ingredients.php'; ?>
 
+    <?php $gebruiker = 0xff; // TODO: Custom user ID ?>
+
     <?= dependencies_css() ?>
   </head>
   <body>
@@ -19,6 +21,8 @@
       <h1>Plaats hier uw order</h1>
 
       <form id="orderform" action="#" method="GET">
+        <input type="hidden" name="klant" value="<?= $klant ?>">
+
         <div class="form-group">
           <select class="broodje selectpicker" title="Broodje"
             data-live-search="true" data-show-subtext="true"

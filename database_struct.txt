@@ -1,0 +1,25 @@
+[DATABASE] Ziekwel
+- [TABLE] Bestellingen
+- [TABLE] Klanten
+- [TABLE] Rekeningen
+
+
+[TABLE] Bestellingen
+- [INT] id           ||  Primary, Auto-Inc, Not Null, Unique  ||  Een apart ID per bestelling
+- [INT] klant        ||  Not Null  ||  Verwijzing naar `Klanten.klantid`
+- [VARCHAR] broodje  ||  Not Null  ||  Het broodje
+- [VARCHAR] beleg    ||            ||  Array met beleg, samengevoegd door ;
+
+
+[TABLE] Klanten
+- [INT] klantid            ||  Primary, Auto-Inc, Not Null, Unique  ||  Een apart ID per klant
+- [VARCHAR] naam           ||  Not Null  ||  De voornaam, tussenvoegsels, en achternaam van de klant
+- [VARCHAR] adresgegevens  ||  Not Null  ||  De adresgegevens van de klant
+- [INT] rekeningid         ||            ||  Verwijzing naar `Rekeningen.rekeningid`
+                                                (NULL bij contant tijdens afhalen / aan de deur)
+
+
+[TABLE] Rekeningen
+- [INT] rekeningid  ||  Primary, Auto-Inc, Not Null, Unique  ||  Een apart ID per rekening
+- [VARCHAR] naam    ||  Not Null  ||  De naam van de persoon van de rekening
+- [VARCHAR] IBAN    ||  Not Null  ||  IBAN nummer van de rekening
