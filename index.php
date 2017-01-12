@@ -1,17 +1,18 @@
-<?php require 'php-templates/dependencies.php'; ?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Broodjesmachine</title>
+    <title>Zikwel | Dé online broodjeswinkel</title>
 
-    <?= dependencies() ?>
+    <?php require 'php-templates/dependencies.php'; ?>
+    <?php require 'php-templates/navigation.php'; ?>
+
+    <?= dependencies_css(); ?>
   </head>
   <body>
-    <?php require 'php-templates/navigation.php'; ?>
+    <?= navigation(); ?>
 
     <div class="container">
       <h1>Welkom bij dé online broodjeswinkel Zikwel</h1>
@@ -44,5 +45,7 @@
             src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Acme_Bread_Shop_Front_2010.JPG">
         </div>
     </div>
+
+    <?= dependencies_js(); ?>
   </body>
 </html>

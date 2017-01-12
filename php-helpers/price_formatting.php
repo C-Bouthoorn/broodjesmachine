@@ -1,6 +1,6 @@
 <?php
   // Float modulus with 1
-  // Practically checks if there is anything after the decimal point.
+  //   Practically checks if there is anything after the decimal point
   function fmod1($a) {
     return fmod($a, 1);
   }
@@ -22,7 +22,7 @@
       return $price . "";
     }
 
-    // More decimals
+    // More than 2 decimals
     else {
       return round($price, 2) . "";
     }

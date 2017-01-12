@@ -1,5 +1,5 @@
 <?php
-  // Will be transfered to database
+  // TODO: Transfer to database(?)
 
   $ALL_BROODJES = [
     "Ciabatta" => [
@@ -29,43 +29,54 @@
 
   $ALL_BELEG = [
     "Ham" => [
-      'price' => 1.00
+      'price' => 1.00,
+      'is_vega' => false
     ],
 
     "Salami" => [
-      'price' => 1.001
+      'price' => 1.001,
+      'is_vega' => false
     ],
 
     "Kipfilet" => [
-      'price' => 1.008
+      'price' => 1.008,
+      'is_vega' => false
     ],
 
     "Leverworst" => [
-      'price' => 1.01
+      'price' => 1.01,
+      'is_vega' => false
     ],
 
+    // Vega:
+
     "Kaas" => [
-      'price' => 1.10
+      'price' => 1.10,
+      'is_vega' => true
     ],
 
     "Ei" => [
-      'price' => 1.11
+      'price' => 1.11,
+      'is_vega' => true
     ],
 
     "Salade" => [
-      'price' => 1.111
+      'price' => 1.11,
+      'is_vega' => true
     ],
 
     "Tomaat" => [
-      'price' => 1.117
+      'price' => 1.117,
+      'is_vega' => true
     ],
 
     "Pesto" => [
-      'price' => 1.00
+      'price' => 1.00,
+      'is_vega' => true
     ]
   ];
 
-  // Convert PHP array to JSON and insert into window
+  // Convert PHP array to JSON array and insert into `window`
   function ingredientsScript() {
     global $ALL_BROODJES, $ALL_BELEG;
 

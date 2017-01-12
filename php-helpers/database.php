@@ -4,6 +4,7 @@
   $pass = 'root';
   $base = 'Ziekwel';
 
+  // Create connection
   $conn = new PDO("mysql:host=$host;dbname=$base", $user, $pass);
 
   // Make sure errors are shown

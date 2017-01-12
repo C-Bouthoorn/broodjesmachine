@@ -1,9 +1,25 @@
-/* This file is pretty empty thanks to Bootstrap */
+/* This file is pretty empty thanks to Bootstrap :) */
 
 body {
+  /* Set default font */
   font-family: 'Raleway', sans-serif;
 }
 
-.bootstrap-select > .dropdown-toggle.bs-placeholder {
-  color: #fff;
+
+/* Edit placeholder colour to match theme */
+.bootstrap-select > .dropdown-toggle.bs-placeholder,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:active,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:focus,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:hover,
+.bootstrap-select > .dropdown-toggle.btn-default,
+.bootstrap-select > .dropdown-toggle.btn-default:active,
+.bootstrap-select > .dropdown-toggle.btn-default:focus,
+.bootstrap-select > .dropdown-toggle.btn-default:hover
+{
+  color: #0c6251; /* = darken(#18bc9c, 20%) */
+}
+
+/* Edit price colour to match theme */
+.bootstrap-select > .dropdown-toggle.btn-default .text-muted {
+  color: #ae1634; /* = darken(invert(#18bc9c), 20%) */
 }

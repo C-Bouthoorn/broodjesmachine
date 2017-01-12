@@ -1,7 +1,9 @@
 <?php
+  // Default success message
   $SUCCESS = json_encode([ 'success' => true ]);
 
-  // Die with error message in JSON
+  // Create error message in JSON format
+  // (usually used with die())
   function create_error($error_message) {
     return json_encode([ 'success' => false, 'error' => [ 'msg' => $error_message ]]);
   }

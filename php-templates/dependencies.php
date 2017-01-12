@@ -28,8 +28,3 @@ function dependencies_css() { ?>
   <!-- Custom styles -->
   <link rel="stylesheet" href="/broodjesmachine/assets/css/style.css">
 <?php }
-
-function dependencies() {
-  dependencies_js();
-  dependencies_css();
-}

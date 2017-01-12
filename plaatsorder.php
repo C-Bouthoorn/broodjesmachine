@@ -7,6 +7,7 @@
     <title>Broodjesmachine</title>
 
     <?php require 'php-templates/dependencies.php'; ?>
+    <?php require 'php-templates/navigation.php'; ?>
     <?php require 'php-helpers/price_formatting.php'; ?>
     <?php require 'api/ingredients.php'; ?>
 
@@ -15,7 +16,7 @@
     <?= dependencies_css() ?>
   </head>
   <body>
-    <?php require 'php-templates/navigation.php'; ?>
+    <?= navigation(); ?>
 
     <div class="container">
       <h1>Plaats hier uw order</h1>

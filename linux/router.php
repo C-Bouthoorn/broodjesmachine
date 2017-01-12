@@ -1,8 +1,9 @@
 <?php
 
+  // Ignore further code (to mimic actual behaviour)
   return false;
 
-  // Ignore further code
+  // ---------------
 
   // Check if $haystacks ends with $needle
   function str_ends_with($haystack, $needle) {
@@ -15,7 +16,7 @@
   }
 
 
-  // HACK?: __FILE__ is the current page in absolute path on the server
+  // HACK?: __FILE__ is the current page in absolute path on the server  (  e.g. /home/.../WWW/index.php )
   if ( file_exists(__FILE__) ) {
     // Let server handle this
     return false;

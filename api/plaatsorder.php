@@ -11,7 +11,7 @@
     return in_array($broodje, array_keys($ALL_BROODJES));
   }
 
-  // Check if `beleg` is valid beleg
+  // Check if `belegArray` is a valid array with beleg
   function checkBelegArray($belegArray) {
     global $ALL_BELEG;
 
@@ -37,9 +37,12 @@
   }
 
 
+  // Convert array to string
+  $belegArrayString = implode(';', $belegArray);
+
   // Add order to database
   $statement = $conn->prepare('INSERT INTO Bestellingen (klant, broodje, beleg) VALUES (:klant, :broodje, :beleg);');
-  $statement->execute([ ':klant' => $klant, ':broodje' => $broodje, ':beleg' => $belegArray ]);
+  $statement->execute([ ':klant' => $klant, ':broodje' => $broodje, ':beleg' => $belegArrayString ]);
 
   // Return success
   die($SUCCESS);
