@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Broodjesmachine</title>
+    <title>Zikwel | Plaats order</title>
 
     <?php require 'php-templates/dependencies.php'; ?>
     <?php require 'php-templates/navigation.php'; ?>

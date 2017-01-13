@@ -1,4 +1,4 @@
-[DATABASE] Ziekwel
+[DATABASE] Zikwel
 - [TABLE] Bestellingen
 - [TABLE] Klanten
 - [TABLE] Rekeningen
@@ -12,7 +12,7 @@
 
 
 [TABLE] Klanten
-- [INT] klantid            ||  Primary, Auto-Inc, Not Null, Unique  ||  Een apart ID per klant
+- [INT] id                 ||  Primary, Auto-Inc, Not Null, Unique  ||  Een apart ID per klant
 - [VARCHAR] naam           ||  Not Null  ||  De voornaam, tussenvoegsels, en achternaam van de klant
 - [VARCHAR] adresgegevens  ||  Not Null  ||  De adresgegevens van de klant
 - [INT] rekeningid         ||            ||  Verwijzing naar `Rekeningen.rekeningid`
@@ -20,6 +20,6 @@
 
 
 [TABLE] Rekeningen
-- [INT] rekeningid  ||  Primary, Auto-Inc, Not Null, Unique  ||  Een apart ID per rekening
-- [VARCHAR] naam    ||  Not Null  ||  De naam van de persoon van de rekening
-- [VARCHAR] IBAN    ||  Not Null  ||  IBAN nummer van de rekening
+- [INT] id        ||  Primary, Auto-Inc, Not Null, Unique  ||  Een apart ID per rekening
+- [VARCHAR] naam  ||  Not Null  ||  De naam van de persoon van de rekening
+- [VARCHAR] IBAN  ||  Not Null  ||  IBAN nummer van de rekening
